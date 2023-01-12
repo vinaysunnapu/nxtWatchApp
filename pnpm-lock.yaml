@@ -23,6 +23,7 @@ specifiers:
   prettier: 2.2.1
   react: 17.0.1
   react-dom: 17.0.1
+  react-hook-form: 7.41.5
   react-icons: 4.2.0
   react-loader-spinner: 4.0.0
   react-player: 2.9.0
@@ -47,6 +48,7 @@ dependencies:
   msw: 0.34.0
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
+  react-hook-form: 7.41.5_react@17.0.1
   react-icons: 4.2.0_react@17.0.1
   react-loader-spinner: 4.0.0_react-dom@17.0.1+react@17.0.1
   react-player: 2.9.0_react@17.0.1
@@ -11626,6 +11628,15 @@ packages:
 
   /react-fast-compare/3.2.0:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
+    dev: false
+
+  /react-hook-form/7.41.5_react@17.0.1:
+    resolution: {integrity: sha512-DAKjSJ7X9f16oQrP3TW2/eD9N6HOgrmIahP4LOdFphEWVfGZ2LulFd6f6AQ/YS/0cx/5oc4j8a1PXxuaurWp/Q==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 17.0.1
     dev: false
 
   /react-icons/4.2.0_react@17.0.1:
