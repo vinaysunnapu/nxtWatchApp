@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
+import {Redirect} from 'react-router-dom'
 
 import './index.css'
 import {Button, ErrorMessage} from './styledComponents'
@@ -84,6 +85,11 @@ class LoginRoute extends Component {
 
     const passwordType = showPassword ? 'text' : 'password'
 
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
+    }
+
     return (
       <div className={`login-background-container ${loginBgColorClassName}`}>
         <div className={`login-container ${loginContainerBgClassName}`}>
@@ -92,7 +98,7 @@ class LoginRoute extends Component {
             alt="website logo"
             className="website-logo-login-image"
           />
-          <from className="login-form-container">
+          <form className="login-form-container">
             <div>
               <label
                 htmlFor="usernameId"
@@ -144,7 +150,7 @@ class LoginRoute extends Component {
               Login
             </Button>
             {showSubmitError && <ErrorMessage>{errorMsg}</ErrorMessage>}
-          </from>
+          </form>
         </div>
       </div>
     )

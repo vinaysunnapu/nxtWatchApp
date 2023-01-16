@@ -38,3 +38,50 @@
   display: flex;
   flex-wrap: wrap;
 }
+.results-not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.results-not-found-image {
+  width: 300px;
+  height: 300px;
+}
+.results-not-found-heading {
+  font-family: roboto;
+  font-weight: bold;
+  font-size: 20px;
+}
+.home-retry-button {
+  border: none;
+  background-color: #4f46e5;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 6px;
+}
+.home-failure-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: roboto;
+}
+.home-failure-image {
+  width: 300px;
+  height: 300px;
+}
+.home-fail-retry-button {
+  border: none;
+  background-color: #4f46e5;
+  padding: 8px;
+  border-radius: 6px;
+  color: #ffffff;
+}
+.loader-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

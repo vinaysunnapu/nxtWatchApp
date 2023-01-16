@@ -7,6 +7,8 @@ const NxtWatchContext = React.createContext({
   removeBanner: () => {},
   toggleTheme: () => {},
   changeSearchInput: () => {},
+  savedVideos: false,
+  addVideos: () => {},
 })
 
 export default NxtWatchContext

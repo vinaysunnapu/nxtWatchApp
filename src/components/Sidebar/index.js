@@ -24,7 +24,7 @@ const Sidebar = () => (
       return (
         <div className={`sidebar-container ${sidebarBgColorClassName}`}>
           <div className="contents-container">
-            <Link to="/home">
+            <Link to="/">
               <div
                 className={`sub-content-container ${subContentColorClassName}`}
               >
@@ -48,7 +48,7 @@ const Sidebar = () => (
                 <p className="sub-content-heading">Gaming</p>
               </div>
             </Link>
-            <Link to="/saved">
+            <Link to="/saved-videos">
               <div
                 className={`sub-content-container ${subContentColorClassName}`}
               >
@@ -58,7 +58,7 @@ const Sidebar = () => (
             </Link>
           </div>
           <div className={`contact-section-container ${contactUsClassName}`}>
-            <h1 className="contact-us-heading">CONTACT US</h1>
+            <p className="contact-us-heading">CONTACT US</p>
             <div className="contact-icons-container">
               <img
                 src="https://assets.ccbp.in/frontend/react-js/nxt-watch-facebook-logo-img.png"

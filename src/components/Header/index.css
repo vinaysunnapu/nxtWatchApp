@@ -50,3 +50,34 @@
   background-color: transparent;
   border: none;
 }
+.popup-contents {
+  font-family: roboto;
+  font-weight: bold;
+}
+.popup-content {
+  width: 400px;
+  background-color: #475569;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}
+.cancel-button {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 6px;
+}
+.confirm-button {
+  color: white;
+  background-color: #3b82f6;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 6px;
+}

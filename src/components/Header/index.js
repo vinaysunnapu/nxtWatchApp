@@ -1,3 +1,7 @@
+import {Link, withRouter} from 'react-router-dom'
+import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css'
+
 import './index.css'
 import Cookies from 'js-cookie'
 
@@ -7,12 +11,6 @@ const Header = props => (
   <NxtWatchContext.Consumer>
     {value => {
       const {isDarkTheme} = value
-
-      const onClickLogout = () => {
-        const {history} = props
-        Cookies.remove('jwt_token')
-        history.replace('/login')
-      }
 
       const nxtWatchLogoImageUrl = !isDarkTheme
         ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
@@ -30,16 +28,28 @@ const Header = props => (
         ? 'header-bg-dark'
         : 'header-bg-light'
 
+      const onClickLogout = () => {
+        const {history} = props
+        Cookies.remove('jwt_token')
+        history.replace('/login')
+      }
+
       return (
         <div className={`header-container ${headerBgColorClassName}`}>
           <div className="header-content">
-            <img
-              src={nxtWatchLogoImageUrl}
-              alt="website logo"
-              className="header-logo-image"
-            />
+            <Link to="/">
+              <img
+                src={nxtWatchLogoImageUrl}
+                alt="website logo"
+                className="header-logo-image"
+              />
+            </Link>
             <div className="logout-container">
-              <button type="button" className="header-theme-button">
+              <button
+                type="button"
+                className="header-theme-button"
+                data-testid="theme"
+              >
                 <img
                   src={themeImageURL}
                   alt="theme"
@@ -51,13 +61,46 @@ const Header = props => (
                 alt="profile"
                 className="header-profile-image"
               />
-              <button
-                type="button"
-                className={`logout-button ${logoutButtonClassName}`}
-                onClick={onClickLogout}
-              >
-                Logout
-              </button>
+              <div className="pop-up-container">
+                <Popup
+                  modal
+                  trigger={
+                    <button
+                      type="button"
+                      className={`logout-button ${logoutButtonClassName}`}
+                    >
+                      Logout
+                    </button>
+                  }
+                  className="popup-content"
+                >
+                  {close => (
+                    <>
+                      <div>
+                        <p className="popup-contents">
+                          Are you sure, you want to logout?
+                        </p>
+                      </div>
+                      <div>
+                        <button
+                          type="button"
+                          className="cancel-button"
+                          onClick={() => close()}
+                        >
+                          Cancel
+                        </button>
+                        <button
+                          type="button"
+                          className="confirm-button"
+                          onClick={onClickLogout}
+                        >
+                          Confirm
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </Popup>
+              </div>
             </div>
           </div>
         </div>
@@ -65,4 +108,4 @@ const Header = props => (
     }}
   </NxtWatchContext.Consumer>
 )
-export default Header
+export default withRouter(Header)

@@ -1,0 +1,28 @@
+.videos-card-list-items {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+.thumbnail-image {
+  width: 350px;
+  height: 200px;
+}
+.videos-card-profile-container {
+  display: flex;
+  justify-content: space-around;
+}
+.profile-image {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
+.profile-content-container {
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: roboto;
+  font-weight: 500;
+}

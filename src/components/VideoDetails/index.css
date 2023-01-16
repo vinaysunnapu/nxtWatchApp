@@ -1,0 +1,66 @@
+.video-data-main-bg-container {
+  display: flex;
+}
+.video-data-bg-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+.views-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.like-button {
+  border: none;
+  background-color: transparent;
+  color: #64748b;
+}
+.horizontal-line {
+  color: black;
+  width: 100%;
+}
+.bottom-container {
+  display: flex;
+}
+.profile-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.like-color {
+  color: #2563eb;
+}
+.dis-like-color {
+  color: #2563eb;
+}
+.video-failure-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: roboto;
+}
+.video-failure-image {
+  width: 300px;
+  height: 300px;
+}
+.video-fail-retry-button {
+  border: none;
+  background-color: #4f46e5;
+  padding: 8px;
+  border-radius: 6px;
+  color: #ffffff;
+}
+.video-loader-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

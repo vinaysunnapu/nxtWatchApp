@@ -1,0 +1,21 @@
+.trending-list-item {
+  list-style-type: none;
+  display: flex;
+  margin-top: 28px;
+  font-family: roboto;
+}
+.trending-thumbnail-image {
+  width: 400px;
+  height: 250px;
+}
+.trending-content-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.trending-heading {
+  font-size: 20px;
+}
+.trending-date {
+  margin-left: 20px;
+}
